@@ -118,7 +118,7 @@
       if (data.success) {
         document.getElementById("response").innerText = "Welcome " + data.name + "!";
         sessionStorage.setItem("authUser", data.name); // Save login session
-        window.location.href = "page2.html"; // go to protected page
+        window.location.href = "dashboard.html"; // go to protected page
       } else {
         document.getElementById("response").innerText = data.message;
       }
