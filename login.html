@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>User Login</title>
+  <title>Login</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,14 +98,9 @@
   </div>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", async function(e){
-      e.preventDefault();
-      
-      let url = "https://script.google.com/macros/s/AKfycbxqvlXupbOLXIarxnTz0v8-HvJlWi8FhRgyqbxOD4sQiMREATV0XDQCg-uugWSctifw/exec"; // replace with your deployed web app URL
-      let email = document.getElementById("email").value;
-      let password = document.getElementById("password").value;
+const url = "https://script.google.com/macros/s/AKfycbxqvlXupbOLXIarxnTz0v8-HvJlWi8FhRgyqbxOD4sQiMREATV0XDQCg-uugWSctifw/exec"; // replace with deployed Apps Script URL
 
-      document.getElementById("loginForm").addEventListener("submit", async (e) => {
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   let email = document.getElementById("email").value;
@@ -127,7 +122,7 @@
     let data = await res.json();
     if (data.success) {
       alert("✅ Login successful!");
-      window.location.href = "dashboard.html"; // protected page
+      window.location.href = "second.html"; // protected page
     } else {
       alert("❌ Invalid credentials!");
     }
@@ -136,6 +131,6 @@
     alert("⚠️ Failed to connect. Check your script URL.");
   }
 });
-  </script>
+</script>
 </body>
 </html>
