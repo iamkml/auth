@@ -122,7 +122,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     let data = await res.json();
     if (data.success) {
       alert("✅ Login successful!");
-      window.location.href = "second.html"; // protected page
+      window.location.href = "dashboard.html"; // protected page
     } else {
       alert("❌ Invalid credentials!");
     }
